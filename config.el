@@ -124,7 +124,7 @@
   :defer t
   :diminish
   :config
-  (setenv "WORKON_HOME" "/Users/stevenzhou/virtualenv")
+  (setenv "WORKON_HOME" "~/virtualenv")
   ;; Show python venv name in modeline
   (setq pyvenv-mode-line-indicator
         '(pyvenv-virtual-env-name ("[venv:" pyvenv-virtual-env-name "] ")))
