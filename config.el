@@ -69,6 +69,9 @@
 (global-set-key (kbd "C-}") 'sp-forward-barf-sexp)
 (global-set-key (kbd "C-(") 'sp-backward-slurp-sexp)
 (global-set-key (kbd "C-{") 'sp-backward-barf-sexp)
+(sp-pair "(" nil :unless '(sp-point-before-word-p))
+(sp-pair "[" nil :unless '(sp-point-before-word-p))
+(sp-pair "{" nil :unless '(sp-point-before-word-p))
 
 ;; Org-agenda
 (setq org-agenda-files '("~/agenda/"))
