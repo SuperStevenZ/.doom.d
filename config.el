@@ -113,10 +113,10 @@
 (setq ns-option-modifier 'none
       ns-right-alternate-modifier 'meta)
 
-;; pytest
-(setq comint-prompt-read-only nil)
-(global-set-key (kbd "C-c C-t C-t") 'python-pytest-function)
-(global-set-key (kbd "C-c C-t C-n") 'python-pytest-file)
+;; ;; pytest
+;; (setq comint-prompt-read-only nil)
+;; (global-set-key (kbd "C-c C-t C-t") 'python-pytest-function)
+;; (global-set-key (kbd "C-c C-t C-n") 'python-pytest-file)
 
 ;; pyvenv
 (use-package pyvenv
@@ -129,3 +129,8 @@
   (setq pyvenv-mode-line-indicator
         '(pyvenv-virtual-env-name ("[venv:" pyvenv-virtual-env-name "] ")))
   (pyvenv-mode t))
+
+;; scala binds
+(map! :map scala-mode-map
+      "C-c F" #'lsp-format-buffer
+      "C-c C-e" #'sbt-send-region)
