@@ -69,6 +69,7 @@
 (global-set-key (kbd "C-}") 'sp-forward-barf-sexp)
 (global-set-key (kbd "C-(") 'sp-backward-slurp-sexp)
 (global-set-key (kbd "C-{") 'sp-backward-barf-sexp)
+(global-set-key (kbd "C-M-9") 'sp-backward-unwrap-sexp)
 (sp-pair "(" nil :unless '(sp-point-before-word-p))
 (sp-pair "[" nil :unless '(sp-point-before-word-p))
 (sp-pair "{" nil :unless '(sp-point-before-word-p))
